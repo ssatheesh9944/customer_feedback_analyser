@@ -60,7 +60,7 @@ def main():
             if df.empty:
                 st.warning("No non-empty reviews found in the uploaded CSV.")
             else:
-                with st.spinner("Analyzing reviews..."):
+                with st.spinner("Analyzing reviews....."):
                     nlp = load_sentiment_pipeline()
                     texts = [t[:1000] for t in df["review"].tolist()]
                     results = nlp(texts, truncation=True)
